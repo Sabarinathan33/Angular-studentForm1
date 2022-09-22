@@ -1,0 +1,104 @@
+<div class="header" style="text-align:center">
+  <h1 style="color:red">Student Form</h1>
+</div>
+<form #f="ngForm" name="form" (ngSubmit)="addStudent()" class="row g-12">
+  <div>
+    <div class="col-12">
+      <label for="firstname">First Name</label>&nbsp;
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        [(ngModel)]="model.firstname"
+      />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="lastname">Last Name</label>&nbsp;
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        [(ngModel)]="model.lastname"
+      />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="email">Email id</label>&nbsp;
+      <input type="email" id="email" name="email" [(ngModel)]="model.email" />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="dob">Date Of Birth</label>&nbsp;
+      <input type="date" id="dob" name="dob" [(ngModel)]="model.dob" />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="male">Male</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="female"
+        [(ngModel)]="model.gender"
+      />
+      &nbsp;
+      <label for="male">Female</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="male"
+        [(ngModel)]="model.gender"
+      />
+      &nbsp;
+      <label for="other">Other</label>&nbsp;
+      <input
+        type="radio"
+        id="gender"
+        name="gender"
+        value="other"
+        [(ngModel)]="model.gender"
+      />
+    </div>
+    <br />
+    <div class="col-12">
+      <label for="qualification">Qualification</label>&nbsp;
+      <select
+        name="qualification"
+        id="qualification"
+        [(ngModel)]="model.qualification"
+      >
+        <option value="IT">IT</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="EIE">EIE</option>
+      </select>
+    </div>
+    <br />
+    <div class="col-12">
+      <input
+        type="checkbox"
+        id="lang1"
+        name="language1"
+        value="Tamil"
+        [(ngModel)]="model.language1"
+      />
+      &nbsp;<label for="vehicle1"> Tamil</label><br />
+      <input
+        type="checkbox"
+        id="lang2"
+        name="language2"
+        value="English"
+        [(ngModel)]="model.language2"
+      />
+      &nbsp;<label for="vehicle2"> English</label><br />
+      <input type="checkbox" id="lang3" name="language3" value="Japanese" />
+      &nbsp;<label for="vehicle3"> Japanese</label><br />
+    </div>
+    <br />
+    <input type="submit" class="btn btn-success" value="save" />
+  </div>
+</form>
+<!-- style=" width: 50vw; margin-left : 25vw;" -->
